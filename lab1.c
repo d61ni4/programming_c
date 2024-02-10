@@ -3,16 +3,24 @@
 
 int main() {
   double a, b, c, D;
-  scanf("%lf %lf %lf", &a, &b, &c);
-  D = b*b - 4*a*c;
+  int repeat = 1;
   
-  if (D > 0) {
-    printf("two roots: %lf, %lf", (-b + sqrt(D))/(2*a), (-b - sqrt(D))/(2*a));
-  } else if (D == 0) {
-    printf("one root: %lf", -b/(2*a));
-  } else {
-    printf("no solution");
-  }
+  while (repeat) {
+    printf("enter a, b, c\n");
+    scanf("%lf %lf %lf", &a, &b, &c);
+    D = b*b - 4*a*c;
 
+    if (D > 0) {
+      printf("two roots: %lf, %lf\n", (-b + sqrt(D))/(2*a), (-b - sqrt(D))/(2*a));
+    } else if (D == 0) {
+      printf("one root: %lf\n", -b/(2*a));
+    } else {
+      printf("no solution\n");
+    }
+    printf("repeat? 1 - yes, 0 - no\n");
+    
+    scanf("%d", &repeat);
+  }
+  
   return 0;
 }
