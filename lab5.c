@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <malloc.h>
 
 void printmatrix(double** matrix, int n) {
   for (int i = 0; i < n; i++) {
@@ -118,4 +117,4 @@ int main(void) {
     printmatrix(res, n); 
     
   return 0;
-}
+} 
